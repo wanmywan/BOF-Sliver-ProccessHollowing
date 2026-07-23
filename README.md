@@ -10,6 +10,8 @@ fresh memory region in the victim process, writes operator-supplied x64
 shellcode into it, redirects the suspended thread's instruction pointer to the
 allocated region, and resumes it. The shellcode then runs under the victim
 process's identity and token.
+![POC](preview.png) 
+![POC](preview2.png)
 
 ## Features
 
