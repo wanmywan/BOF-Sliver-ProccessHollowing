@@ -1,0 +1,33 @@
+{
+  "name": "process_hollowing",
+  "command_name": "hollow",
+  "version": "1.0.0",
+  "extension_author": "wannwann",
+  "original_author": "@5mukx",
+  "repo_url": "https://git.smukx.site/smukx/Rust-for-Malware-Development",
+  "help": "Process hollowing — inject operator-supplied shellcode into a suspended process",
+  "long_help": "Spawns <target> in CREATE_SUSPENDED state, parses its PEB / PE headers to locate the entrypoint, flips it RWX, overwrites it with the shellcode bytes supplied via --shellcode (read from the operator's filesystem, packed inline), and resumes the thread. The shellcode inherits the victim's identity and token.",
+  "depends_on": "coff-loader",
+  "entrypoint": "go",
+  "files": [
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "process_hollowing.x64.o"
+    }
+  ],
+  "arguments": [
+    {
+      "name": "target",
+      "desc": "Path to executable to hollow (e.g. C:\\Windows\\System32\\notepad.exe)",
+      "type": "string",
+      "optional": false
+    },
+    {
+      "name": "shellcode",
+      "desc": "Path to raw x64 shellcode file (operator-side, e.g. /tmp/sc.bin)",
+      "type": "file",
+      "optional": false
+    }
+  ]
+}

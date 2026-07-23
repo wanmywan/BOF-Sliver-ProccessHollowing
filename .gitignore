@@ -1,0 +1,10 @@
+# Build artifacts
+*.o
+*.obj
+
+# Editor / OS cruft
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
