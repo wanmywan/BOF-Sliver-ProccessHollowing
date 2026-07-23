@@ -10,8 +10,13 @@ fresh memory region in the victim process, writes operator-supplied x64
 shellcode into it, redirects the suspended thread's instruction pointer to the
 allocated region, and resumes it. The shellcode then runs under the victim
 process's identity and token.
+
 ![POC](preview.png) 
 ![POC](preview2.png)
+
+> [!WARNING]
+> This code is intended solely for educational, research, and authorized testing purposes. Unauthorized use of this software on production systems or without explicit permission is strictly prohibited. The author accepts no liability for any damage or misuse caused by this repository.
+
 
 ## Features
 
@@ -192,6 +197,8 @@ use the same code path.
   whose decoder runs longer and writes to the code region after the page is
   flipped to `RX` would crash on the subsequent write.
 - **Windows-only**: BOFs in Sliver are supported only for Windows implants.
+
+  
 
 ## Repository layout
 
