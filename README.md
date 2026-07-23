@@ -206,8 +206,9 @@ process_hollowing/
 
 ## Acknowledgments
 
-- Original Rust process-hollowing reference by
+- process-hollowing reference by
   [@5mukx](https://git.smukx.site/smukx/Rust-for-Malware-Development).
+  [reevesrs24](https://github.com/reevesrs24/EvasiveProcessHollowing).
 - [COFFLoader](https://github.com/sliverarmory/COFFLoader) by TrustedSec /
   Sliver Armory -- the beacon API header in `src/beacon.h` is sourced from
   this project.
